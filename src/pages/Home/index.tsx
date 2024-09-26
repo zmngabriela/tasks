@@ -8,7 +8,7 @@ const Home = () => {
       <SideBar displayFilters />
       <TaskList />
       <AddButton />
-  </>
+    </>
   )
 }
 

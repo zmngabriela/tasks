@@ -1,8 +1,10 @@
 import { ChangeEvent, useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
+
 import { remove, edit, changeStatus } from '../../store/reducers/tasks'
 import TaskClass from '../../models/Task'
 import * as enums from '../../utils/enums/Tarefa'
+
 import * as S from './styles'
 import { Button, SaveButton } from '../../styles'
 

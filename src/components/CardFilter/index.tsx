@@ -15,8 +15,6 @@ const CardFilter = ({ status, criterion, value }: Props) => {
   const filter = useSelector((state: RootReducer) => state.filter)
   const tasks = useSelector((state: RootReducer) => state.tasks)
 
-  // esse no caso e so pra criar um booleano, pra jogar pro styles.ts e validar o estilo do item que ta ativo
-  // ele pega os valores que o onclick filtrou e atualizou no estado, e ve se eles sao vdd && vdd ou falso && falso e gera um booleano
   const verifyIsActive = () => {
     const sameCriterion = filter.criterion === criterion
     const sameValue = filter.value === value
@@ -34,10 +32,8 @@ const CardFilter = ({ status, criterion, value }: Props) => {
   }
 
   const counter = countTasks()
-  // so pra criar uma constante e usar ela na props, pq se usar a funcao fica meio feio
   const active = verifyIsActive()
 
-  // esse filtra e altera o estado do criterio e value quando clicamos no card que queremos filtrar
   const filtering = () => {
     dispatch(updateFilter({
       criterion,

@@ -52,15 +52,6 @@ export const tasksSlice = createSlice({
         state.itens[indexTask] = action.payload
       }
     },
-    //  REMOVIDO POIS ERRO DE FALHA NO TRATAMENTO DE PASSAR UMA CLASSE COMO PAYLOADACTION
-    //  addTask: (state, action: PayloadAction<Task>) => {
-    //   const taskExist = state.itens.find(task => task.title.toLowerCase() === action.payload.title.toLowerCase())
-    //   if (taskExist) {
-    //     alert('This task is already added.')
-    //   } else {
-    //     state.itens.push(action.payload)
-    //   }
-    // },
     addTask: (state, action: PayloadAction<Omit<Task, 'id'>>) => {
       const taskExist = state.itens.find(task => task.title.toLowerCase() === action.payload.title.toLowerCase())
       if (taskExist) {

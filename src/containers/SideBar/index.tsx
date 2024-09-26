@@ -1,9 +1,11 @@
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
+
 import { RootReducer } from "../../store"
 import { updateTerm } from "../../store/reducers/filter"
 import CardFilter from "../../components/CardFilter"
 import * as enums from '../../utils/enums/Tarefa'
+
 import * as S from './styles'
 import { Button, Input } from "../../styles"
 

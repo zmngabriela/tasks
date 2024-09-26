@@ -1,10 +1,5 @@
 import styled from "styled-components"
 
-// type OmitedProps = Omit<Props, 'counter'| 'status' | 'criterion'>
-// type Props = {
-//   active: boolean
-// }
-
 export const Card = styled.div<{ $active: boolean }>`
   padding: 8px;
   border: 1px solid ${props => props.$active ? '#1E90FF' : '#a1a1a1'};
